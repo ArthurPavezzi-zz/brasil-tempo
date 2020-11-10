@@ -21,91 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="724415bb-6430-48e5-a80c-e51615ba2ebe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Models/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/database/seeders/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/public/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/brasil-tempo/webpack.mix.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -263,7 +181,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1605021044236</updated>
-      <workItem from="1605021068047" duration="834000" />
+      <workItem from="1605021068047" duration="2556000" />
     </task>
     <servers />
   </component>
@@ -282,9 +200,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605021923684">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605023364157">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605021923684" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1605023364157" />
   </component>
 </project>
