@@ -2013,15 +2013,19 @@ __webpack_require__.r(__webpack_exports__);
       });
       var $address = document.querySelector('#address-value');
       placesAutoComplete.on('change', function (e) {
-        $address.textContent = e.suggestion.value;
+        if (!_this4.isInBrazil(e.suggestion.country)) {
+          alert("Erro! Localização pesquisada fora do território nacional. Por favor, selecione um município brasileiro");
+        } else {
+          $address.textContent = e.suggestion.value;
 
-        _this4.fetchStateCode();
+          _this4.fetchStateCode();
 
-        _this4.setCityName(e.suggestion.name);
+          _this4.setCityName(e.suggestion.name);
 
-        _this4.fetchCityCode();
+          _this4.fetchCityCode();
 
-        _this4.dailyWeather = [];
+          _this4.dailyWeather = [];
+        }
       });
       placesAutoComplete.on('clear', function () {
         $address.textContent = 'none';
@@ -2071,6 +2075,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     setCityName: function setCityName(cityName) {
       this.location.city = cityName;
+    },
+    isInBrazil: function isInBrazil(location) {
+      return location === "Brasil";
     }
   },
   mounted: function mounted() {

@@ -96,11 +96,15 @@ export default {
       let $address = document.querySelector('#address-value');
 
       placesAutoComplete.on('change', (e) => {
-        $address.textContent = e.suggestion.value;
-        this.fetchStateCode();
-        this.setCityName(e.suggestion.name);
-        this.fetchCityCode();
-        this.dailyWeather = [];
+        if (!this.isInBrazil(e.suggestion.country)) {
+          alert("Erro! Localização pesquisada fora do território nacional. Por favor, selecione um município brasileiro")
+        } else {
+          $address.textContent = e.suggestion.value;
+          this.fetchStateCode();
+          this.setCityName(e.suggestion.name);
+          this.fetchCityCode();
+          this.dailyWeather = [];
+        }
       });
 
       placesAutoComplete.on('clear', function () {
@@ -150,6 +154,9 @@ export default {
     },
     setCityName(cityName) {
       this.location.city = cityName;
+    },
+    isInBrazil(location) {
+      return location === "Brasil";
     }
   },
   mounted() {
