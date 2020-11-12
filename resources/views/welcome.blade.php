@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brasil Tempo</title>
 
+    <link rel="icon" href="weather.png">
     <link rel="stylesheet" href="/css/main.css">
     <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0/dist/cdn/places.min.js" defer></script>
     <script src="js/app.js" defer></script>
