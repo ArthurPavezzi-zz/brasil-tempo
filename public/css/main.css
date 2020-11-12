@@ -21638,6 +21638,15 @@ video {
           animation: bounce 1s infinite;
 }
 
+.ap-footer svg {
+  display: inline;
+}
+
+.ap-suggestion-icon svg {
+  display: inline-block;
+  margin-top: -0.75rem;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

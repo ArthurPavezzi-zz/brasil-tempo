@@ -8,11 +8,12 @@
     <title>Brasil Tempo</title>
 
     <link rel="stylesheet" href="/css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0/dist/cdn/places.min.js" defer></script>
     <script src="js/app.js" defer></script>
 </head>
 <body class="bg-blue-500">
-<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta dolore eaque, inventore ipsum neque perspiciatis
-    voluptas. Adipisci ipsum non officiis placeat totam! Animi blanditiis consequatur cumque dolor impedit incidunt
-    maiores!</h3>
+<div id="app" class="flex justify-center pt-16">
+    <weather-app/>
+</div>
 </body>
 </html>
