@@ -19,19 +19,20 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/weather', function () {
+Route::middleware('https')->get('/weather', function () {
     $geocode = \request('geocode');
     $response = Http::get("https://apiprevmet3.inmet.gov.br/previsao/$geocode");
     return $response->json();
 });
 
-Route::get('/state-code', function () {
+
+Route::middleware('https')->get('/state-code', function () {
     $stateName = \request('name');
     $response = Http::get("https://servicodados.ibge.gov.br/api/v1/localidades/estados/$stateName");
     return $response->json();
 });
 
-Route::get('/city-code', function () {
+Route::middleware('https')->get('/city-code', function () {
 
     $stateCode = \request('stateCode');
     $cityName = \request('cityName');
@@ -42,4 +43,6 @@ Route::get('/city-code', function () {
             return json_encode($city);
         }
     }
+
+    return json_encode([]);
 });
