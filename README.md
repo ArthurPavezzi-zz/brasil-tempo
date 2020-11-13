@@ -20,13 +20,8 @@ php artisan ui vue
 npm install
 ```
 
-- Instalação do Tailwind
+- Instalação do Tailwind e  das demais dependências
 ```
-npm install tailwindcss
+npm install tailwindcss moment axios
 ```
 Depois, siga as instruções do [site oficial](https://tailwindcss.com/docs/installation).
-
-- Instalação das demais dependências
-```
-npm install moment
-```
