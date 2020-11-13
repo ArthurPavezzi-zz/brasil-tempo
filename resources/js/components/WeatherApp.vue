@@ -59,34 +59,38 @@ export default {
     }
   },
   methods: {
-    changeLocaleToPtBR() {
+    changeLocaleToPtBr() {
       moment.locale('pt-br');
     },
-    fetchCityCode() {
-      // fetch(`https://brasil-tempo.herokuapp.com/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
-        fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${this.location.stateCode}/municipios`)
+    async fetchCityCode() {
+      await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${this.location.stateCode}/municipios`)
         .then(response => response.json())
         .then(data => {
-          let city = data.filter(city => city.nome === this.location.city)
-          this.setCityCode(city.id)
+          let city = data.filter(city => city.nome === this.location.city);
+          this.setCityCode(city[0].id);
         })
     },
     fetchWeatherData() {
-      // fetch(`https://brasil-tempo.herokuapp.com/api/weather/?geoCode=${this.location.cityCode}`)
       fetch(`https://apiprevmet3.inmet.gov.br/previsao/${this.location.cityCode}`)
         .then(response => response.json())
         .then(data => {
           this.pushDailyWeather(data);
         });
     },
-    fetchStateCode() {
-      // fetch(`https://brasil-tempo.herokuapp.com/api/state-code?name=${this.location.name}`)
-      fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${this.location.state}`)
+    async fetchStateCode(stateName) {
+      await fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/`)
         .then(response => response.json())
         .then(data => {
-          this.setStateCode(data.id);
-          this.setStateName(data.sigla);
+          let state = data.filter(state => state.nome === stateName)
+          this.setStateCode(state[0].id);
+          this.setStateName(state[0].sigla);
         });
+    },
+    async handleCityChange(location) {
+      this.dailyWeather = [];
+      await this.fetchStateCode(location.administrative);
+      await this.setCityName(location.name);
+      await this.fetchCityCode();
     },
     handleSearch() {
       const placesAutoComplete = places({
@@ -98,26 +102,18 @@ export default {
         aroundLatLngViaIp: false
       });
 
-      let $address = document.querySelector('#address-value');
-
       placesAutoComplete.on('change', (e) => {
+        this.dailyWeather = [];
         if (!this.isInBrazil(e.suggestion.country)) {
           alert("Erro! Localização pesquisada fora do território nacional. Por favor, selecione um município brasileiro")
         } else {
-          $address.textContent = e.suggestion.value;
-          this.fetchStateCode();
-          this.setCityName(e.suggestion.name);
-          this.fetchCityCode();
-          this.dailyWeather = [];
-        }
-      });
+          this.handleCityChange(e.suggestion);
 
-      placesAutoComplete.on('clear', function () {
-        $address.textContent = 'none';
+        }
       });
     },
     pushDailyWeather(data) {
-      this.changeLocaleToPtBR();
+      this.changeLocaleToPtBr();
       let currentMoment = moment();
       const fiveDaysAhead = moment().add(5, 'days')
       const weather = data[this.location.cityCode];
