@@ -1955,9 +1955,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-
-var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["default"];
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1986,7 +1983,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["d
     fetchWeatherData: function fetchWeatherData() {
       var _this2 = this;
 
-      axios.get("https://brasil-tempo.herokuapp.com/api/weather/?geoCode=".concat(this.location.cityCode)).then(function (response) {
+      fetch("https://brasil-tempo.herokuapp.com/api/weather/?geoCode=".concat(this.location.cityCode)).then(function (response) {
         return response.json();
       }).then(function (data) {
         _this2.pushDailyWeather(data);

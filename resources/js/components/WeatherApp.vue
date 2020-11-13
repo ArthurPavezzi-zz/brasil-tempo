@@ -44,8 +44,7 @@
 
 <script>
 import moment from 'moment';
-
-const axios = require('axios').default;
+import fetch from 'node-fetch';
 
 export default {
   data() {
@@ -64,21 +63,21 @@ export default {
       moment.locale('pt-br');
     },
     fetchCityCode() {
-      axios.get(`https://brasil-tempo.herokuapp.com/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
+      fetch(`https://brasil-tempo.herokuapp.com/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
         .then(response => response.json())
         .then(data => {
           this.setCityCode(data.id)
         })
     },
     fetchWeatherData() {
-      axios.get(`https://brasil-tempo.herokuapp.com/api/weather/?geoCode=${this.location.cityCode}`)
+      fetch(`https://brasil-tempo.herokuapp.com/api/weather/?geoCode=${this.location.cityCode}`)
         .then(response => response.json())
         .then(data => {
           this.pushDailyWeather(data);
         });
     },
     fetchStateCode() {
-      axios.get(`https://brasil-tempo.herokuapp.com/api/state-code?name=${this.location.name}`)
+      fetch(`https://brasil-tempo.herokuapp.com/api/state-code?name=${this.location.name}`)
         .then(response => response.json())
         .then(data => {
           this.setStateCode(data.id);
