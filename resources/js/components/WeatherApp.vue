@@ -62,21 +62,21 @@ export default {
       moment.locale('pt-br');
     },
     fetchCityCode() {
-      fetch(`/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
+      fetch(`https://brasil-tempo.herokuapp.com/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
         .then(response => response.json())
         .then(data => {
           this.setCityCode(data.id)
-        });
+        })
     },
     fetchWeatherData() {
-      fetch(`/api/weather/?geocode=${this.location.cityCode}`)
+      fetch(`https://brasil-tempo.herokuapp.com/api/weather/?geocode=${this.location.cityCode}`)
         .then(response => response.json())
         .then(data => {
           this.pushDailyWeather(data);
         });
     },
     fetchStateCode() {
-      fetch(`/api/state-code?name=${this.location.state}`)
+      fetch(`https://brasil-tempo.herokuapp.com/api/state-code?name=${this.location.state}`)
         .then(response => response.json())
         .then(data => {
           this.setStateCode(data.id);
