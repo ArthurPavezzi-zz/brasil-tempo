@@ -45,6 +45,15 @@
 <script>
 import moment from 'moment';
 
+const Frisbee = require('frisbee');
+const api = new Frisbee({
+  baseURI: 'https://brasil-tempo.herokuapp.com',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json'
+  }
+});
+
 export default {
   data() {
     return {
@@ -62,21 +71,29 @@ export default {
       moment.locale('pt-br');
     },
     fetchCityCode() {
-      fetch(`https://brasil-tempo.herokuapp.com/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
+      api.get(`/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
         .then(response => response.json())
         .then(data => {
           this.setCityCode(data.id)
         })
     },
     fetchWeatherData() {
-      fetch(`https://brasil-tempo.herokuapp.com/api/weather/?geocode=${this.location.cityCode}`)
+      api.get('api/weather/?geoCode=this.location.cityCode', {
+        searchParams: {
+          geocode:
+        }
+      })
         .then(response => response.json())
         .then(data => {
           this.pushDailyWeather(data);
         });
     },
     fetchStateCode() {
-      fetch(`https://brasil-tempo.herokuapp.com/api/state-code?name=${this.location.state}`)
+      got('/api/state-code', {
+        searchParams: {
+          name: this.location.name
+        }
+      })
         .then(response => response.json())
         .then(data => {
           this.setStateCode(data.id);

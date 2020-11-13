@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/weather', function () {
-    $geocode = \request('geocode');
+    $geoCode = \request('geoCode');
     $response = Http::get("https://apiprevmet3.inmet.gov.br/previsao/$geocode");
     return $response->json();
 });
@@ -43,6 +43,4 @@ Route::get('/city-code', function () {
             return json_encode($city);
         }
     }
-
-    return json_encode([]);
 });
