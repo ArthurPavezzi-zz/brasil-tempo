@@ -20,9 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="724415bb-6430-48e5-a80c-e51615ba2ebe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/WeatherApp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/WeatherApp.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +198,7 @@
       <workItem from="1605126983375" duration="13204000" />
       <workItem from="1605212168887" duration="19215000" />
       <workItem from="1605244778307" duration="5246000" />
-      <workItem from="1605293183093" duration="6852000" />
+      <workItem from="1605293183093" duration="6976000" />
     </task>
     <servers />
   </component>

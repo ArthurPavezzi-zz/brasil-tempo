@@ -6,6 +6,10 @@ Os dados provêm de 3 APIs:
 - O código do município pesquisado vem da [API de localidades](https://servicodados.ibge.gov.br/api/docs/localidades) do IBGE
 - Os dados metereológicos vêm da [API de previsão do tempo](https://portal.inmet.gov.br/manual/manual-de-uso-da-api-de-previs%C3%A3o) do [INMET - Instituto Nacional de Metereologia](https://portal.inmet.gov.br/) 
 
+Foi utilizado assincronismo para garantir que o fluxo não continue enquanto os resultados das buscas não esteja pronto.
+
+Veja o aplicativo funcionando ao vivo [neste link](https://brasil-tempo.herokuapp.com/).
+
 ## Criação do ambiente
 
 - Criação do projeto
