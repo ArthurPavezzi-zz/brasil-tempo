@@ -1910,6 +1910,8 @@ module.exports = {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! moment */ "./node_modules/moment/moment.js");
 /* harmony import */ var moment__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(moment__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! node-fetch */ "./node_modules/node-fetch/browser.js");
+/* harmony import */ var node_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(node_fetch__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -1954,6 +1956,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1974,16 +1977,22 @@ __webpack_require__.r(__webpack_exports__);
     fetchCityCode: function fetchCityCode() {
       var _this = this;
 
-      axios.get("https://brasil-tempo.herokuapp.com/api/city-code?stateCode=".concat(this.location.stateCode, "&cityName=").concat(this.location.city)).then(function (response) {
+      // fetch(`https://brasil-tempo.herokuapp.com/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
+      node_fetch__WEBPACK_IMPORTED_MODULE_1___default()("https://servicodados.ibge.gov.br/api/v1/localidades/estados/".concat(this.location.stateCode, "/municipios")).then(function (response) {
         return response.json();
       }).then(function (data) {
-        _this.setCityCode(data.id);
+        var city = data.filter(function (city) {
+          return city.nome === _this.location.city;
+        });
+
+        _this.setCityCode(city.id);
       });
     },
     fetchWeatherData: function fetchWeatherData() {
       var _this2 = this;
 
-      fetch("https://brasil-tempo.herokuapp.com/api/weather/?geoCode=".concat(this.location.cityCode)).then(function (response) {
+      // fetch(`https://brasil-tempo.herokuapp.com/api/weather/?geoCode=${this.location.cityCode}`)
+      node_fetch__WEBPACK_IMPORTED_MODULE_1___default()("https://apiprevmet3.inmet.gov.br/previsao/".concat(this.location.cityCode)).then(function (response) {
         return response.json();
       }).then(function (data) {
         _this2.pushDailyWeather(data);
@@ -1992,7 +2001,8 @@ __webpack_require__.r(__webpack_exports__);
     fetchStateCode: function fetchStateCode() {
       var _this3 = this;
 
-      axios.get("https://brasil-tempo.herokuapp.com/api/state-code?name=".concat(this.location.name)).then(function (response) {
+      // fetch(`https://brasil-tempo.herokuapp.com/api/state-code?name=${this.location.name}`)
+      node_fetch__WEBPACK_IMPORTED_MODULE_1___default()("https://servicodados.ibge.gov.br/api/v1/localidades/estados/".concat(this.location.state)).then(function (response) {
         return response.json();
       }).then(function (data) {
         _this3.setStateCode(data.id);
@@ -56266,6 +56276,42 @@ webpackContext.id = "./node_modules/moment/locale sync recursive ^\\.\\/.*$";
 })));
 
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
+/***/ "./node_modules/node-fetch/browser.js":
+/*!********************************************!*\
+  !*** ./node_modules/node-fetch/browser.js ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// ref: https://github.com/tc39/proposal-global
+var getGlobal = function () {
+	// the only reliable means to get the global object is
+	// `Function('return this')()`
+	// However, this causes CSP violations in Chrome apps.
+	if (typeof self !== 'undefined') { return self; }
+	if (typeof window !== 'undefined') { return window; }
+	if (typeof global !== 'undefined') { return global; }
+	throw new Error('unable to locate global object');
+}
+
+var global = getGlobal();
+
+module.exports = exports = global.fetch;
+
+// Needed for TypeScript and Webpack.
+if (global.fetch) {
+	exports.default = global.fetch.bind(global);
+}
+
+exports.Headers = global.Headers;
+exports.Request = global.Request;
+exports.Response = global.Response;
 
 /***/ }),
 
