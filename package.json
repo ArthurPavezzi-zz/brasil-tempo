@@ -26,7 +26,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "got": "^11.8.0",
+        "frisbee": "^3.1.4",
         "moment": "^2.29.1",
         "tailwindcss": "^1.9.6",
         "vue-progress-path": "0.0.2"
