@@ -1977,7 +1977,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["d
     fetchCityCode: function fetchCityCode() {
       var _this = this;
 
-      axios.get("/api/city-code?stateCode=".concat(this.location.stateCode, "&cityName=").concat(this.location.city)).then(function (response) {
+      axios.get("https://brasil-tempo.herokuapp.com/api/city-code?stateCode=".concat(this.location.stateCode, "&cityName=").concat(this.location.city)).then(function (response) {
         return response.json();
       }).then(function (data) {
         _this.setCityCode(data.id);
@@ -1986,7 +1986,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["d
     fetchWeatherData: function fetchWeatherData() {
       var _this2 = this;
 
-      axios.get("api/weather/?geoCode=".concat(this.location.cityCode)).then(function (response) {
+      axios.get("https://brasil-tempo.herokuapp.com/api/weather/?geoCode=".concat(this.location.cityCode)).then(function (response) {
         return response.json();
       }).then(function (data) {
         _this2.pushDailyWeather(data);
@@ -1995,7 +1995,7 @@ var axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["d
     fetchStateCode: function fetchStateCode() {
       var _this3 = this;
 
-      axios.get("/api/state-code?name=".concat(this.location.name)).then(function (response) {
+      axios.get("https://brasil-tempo.herokuapp.com/api/state-code?name=".concat(this.location.name)).then(function (response) {
         return response.json();
       }).then(function (data) {
         _this3.setStateCode(data.id);

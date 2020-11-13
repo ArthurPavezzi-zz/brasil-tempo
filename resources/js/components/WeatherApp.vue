@@ -64,21 +64,21 @@ export default {
       moment.locale('pt-br');
     },
     fetchCityCode() {
-      axios.get(`/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
+      axios.get(`https://brasil-tempo.herokuapp.com/api/city-code?stateCode=${this.location.stateCode}&cityName=${this.location.city}`)
         .then(response => response.json())
         .then(data => {
           this.setCityCode(data.id)
         })
     },
     fetchWeatherData() {
-      axios.get(`api/weather/?geoCode=${this.location.cityCode}`)
+      axios.get(`https://brasil-tempo.herokuapp.com/api/weather/?geoCode=${this.location.cityCode}`)
         .then(response => response.json())
         .then(data => {
           this.pushDailyWeather(data);
         });
     },
     fetchStateCode() {
-      axios.get(`/api/state-code?name=${this.location.name}`)
+      axios.get(`https://brasil-tempo.herokuapp.com/api/state-code?name=${this.location.name}`)
         .then(response => response.json())
         .then(data => {
           this.setStateCode(data.id);
