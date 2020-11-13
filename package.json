@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "moment": "^2.29.1",
+        "node-fetch": "^2.6.1",
         "tailwindcss": "^1.9.6",
         "vue-progress-path": "0.0.2"
     }
