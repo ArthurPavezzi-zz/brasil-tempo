@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/weather', function () {
     $geoCode = \request('geoCode');
-    $response = Http::get("https://apiprevmet3.inmet.gov.br/previsao/$geocode");
+    $response = Http::get("https://apiprevmet3.inmet.gov.br/previsao/$geoCode");
     return $response->json();
 });
 
