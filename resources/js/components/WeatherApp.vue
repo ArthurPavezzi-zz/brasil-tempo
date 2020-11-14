@@ -71,6 +71,7 @@ export default {
         })
     },
     fetchWeatherData() {
+      this.dailyWeather = [];
       fetch(`https://apiprevmet3.inmet.gov.br/previsao/${this.location.cityCode}`)
         .then(response => response.json())
         .then(data => {
@@ -87,7 +88,6 @@ export default {
         });
     },
     async handleCityChange(location) {
-      this.dailyWeather = [];
       await this.fetchStateCode(location.administrative);
       await this.setCityName(location.name);
       await this.fetchCityCode();
@@ -103,7 +103,6 @@ export default {
       });
 
       placesAutoComplete.on('change', (e) => {
-        this.dailyWeather = [];
         if (!this.isInBrazil(e.suggestion.country)) {
           alert("Erro! Localização pesquisada fora do território nacional. Por favor, selecione um município brasileiro")
         } else {

@@ -2024,6 +2024,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     fetchWeatherData: function fetchWeatherData() {
       var _this2 = this;
 
+      this.dailyWeather = [];
       node_fetch__WEBPACK_IMPORTED_MODULE_2___default()("https://apiprevmet3.inmet.gov.br/previsao/".concat(this.location.cityCode)).then(function (response) {
         return response.json();
       }).then(function (data) {
@@ -2067,19 +2068,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context3.prev = _context3.next) {
               case 0:
-                _this4.dailyWeather = [];
-                _context3.next = 3;
+                _context3.next = 2;
                 return _this4.fetchStateCode(location.administrative);
 
-              case 3:
-                _context3.next = 5;
+              case 2:
+                _context3.next = 4;
                 return _this4.setCityName(location.name);
 
-              case 5:
-                _context3.next = 7;
+              case 4:
+                _context3.next = 6;
                 return _this4.fetchCityCode();
 
-              case 7:
+              case 6:
               case "end":
                 return _context3.stop();
             }
@@ -2099,8 +2099,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         aroundLatLngViaIp: false
       });
       placesAutoComplete.on('change', function (e) {
-        _this5.dailyWeather = [];
-
         if (!_this5.isInBrazil(e.suggestion.country)) {
           alert("Erro! Localização pesquisada fora do território nacional. Por favor, selecione um município brasileiro");
         } else {
