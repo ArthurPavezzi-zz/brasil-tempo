@@ -9,8 +9,8 @@
 
     <link rel="icon" href="weather.png">
     <link rel="stylesheet" href="/css/main.css">
-    <script src="js/app.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0/dist/cdn/places.min.js" defer></script>
+    <script src="js/app.js" defer></script>
 </head>
 <body class="bg-blue-500">
 <div id="app" class="flex justify-center pt-16">
