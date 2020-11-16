@@ -1,40 +1,39 @@
 <template>
-  <div class="container text-white mb-8">
-    <div class="location-input text-gray-800">
-      <input type="search" id="address" class="form-control w-full" placeholder="Procure uma cidade">
-      <p hidden>Selecionado: <strong id="address-value">none</strong></p>
+  <div class="container text-white">
+    <div class="location-input mx-6 md:mx-auto w-auto lg:w-1/2 my-0 text-gray-800">
+      <input type="search" id="address" class="form-control rounded-3xl pl-4" placeholder="Procure uma cidade">
     </div>
     <div class="loading" v-if="!dailyWeather.length">
       <loading-progress indeterminate size="64" rotate fillDuration="2" rotationDuration="1"/>
     </div>
     <div v-else
-         class="weather-container font-sans w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-ld mt-4">
+         class="weather-container mx-auto font-sans w-10/12 w-auto sm:w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-ld mt-4">
       <div class="current-weather flex items-center justify-between px-6 py-8">
         <div class="flex items-center">
           <div class="w-1/2 current-temp">
-            <div class="text-4xl font-semibold">Máx: {{ dailyWeather[0].max }}º</div>
-            <div>Mínima de {{ dailyWeather[0].min }}º</div>
+            <p class="text-4xl font-semibold">Máx: {{ dailyWeather[0].max }}º</p>
+            <p>Mínima de {{ dailyWeather[0].min }}º</p>
           </div> <!-- current-temp -->
           <div class="w-1/2 mx-5">
-            <div class="font-semibold">{{ dailyWeather[0].description }}</div>
-            <div>{{ location.city }} - {{ location.state }}</div>
+            <p class="font-semibold">{{ dailyWeather[0].description }}</p>
+            <p>{{ location.city }} - {{ location.state }}</p>
           </div>
         </div>
-        <div class="weather-image">
+        <div class="weather-image mr-0 right-0">
           <img :src="dailyWeather[0].icon" alt="icone" width="150" height="150">
         </div> <!-- weather-image -->
       </div> <!-- current-weather -->
       <div class="future-weather py-2 text-sm bg-gray-800 px-6 overflow-hidden"
            v-for="(weather, index) in dailyWeather" :key="index" v-if="index > 0">
         <div class="flex items-center">
-          <div class="w-1/7 text-lg text-gray-200">{{ weather.day }}</div>
+          <p class="w-1/7 text-lg text-gray-200">{{ weather.day }}</p>
           <div class="w-5/7 inline-flex items-center">
-            <div><img :src="weather.icon" alt="" width="90" height="90"></div>
-            <div class="ml-3">{{ weather.description }}</div>
+            <img :src="weather.icon" alt="" width="80" height="80">
+            <p class="ml-3">{{ weather.description }}</p>
           </div>
-          <div class="w-1/7 text-right future-max-min">
-            <div>{{ weather.max }}º</div>
-            <div>{{ weather.min }}º</div>
+          <div class="future-max-min ml-auto my-0 mr-0 w-1/7 text-right">
+            <p>{{ weather.max }}º</p>
+            <p>{{ weather.min }}º</p>
           </div> <!-- future-max-min -->
         </div>
       </div> <!-- future-weather -->
@@ -174,33 +173,8 @@ export default {
 }
 </script>
 <style scoped>
-.location-input {
-  display: flex;
-  border-radius: 10px;
-  width: 50%;
-  margin: 0 auto;
-}
-
-.location-input input {
-  padding-left: 10px;
-}
-
 .vue-progress-path {
   display: flex;
   margin: 180px auto;
-}
-
-.weather-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.weather-image {
-  right: 0;
-  margin-right: 0;
-}
-
-.future-max-min {
-  margin: 0 0 0 auto;
 }
 </style>

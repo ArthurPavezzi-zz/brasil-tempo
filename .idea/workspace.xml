@@ -21,6 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="724415bb-6430-48e5-a80c-e51615ba2ebe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/WeatherApp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/WeatherApp.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,7 +202,7 @@
       <workItem from="1605244778307" duration="5246000" />
       <workItem from="1605293183093" duration="6976000" />
       <workItem from="1605379960913" duration="1230000" />
-      <workItem from="1605499783282" duration="552000" />
+      <workItem from="1605499783282" duration="4928000" />
     </task>
     <servers />
   </component>
@@ -288,14 +290,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="534" key="GridCell.Tab.3.right/0.0.1536.824@0.0.1536.824" timestamp="1605235298607" />
+    <state x="349" y="147" key="IDE.errors.dialog" timestamp="1605501361824">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="349" y="147" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1605501361824" />
     <state x="501" y="135" key="NewPhpClassDialog" timestamp="1605221552798">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="501" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1605221552798" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1605274270571">
+    <state x="425" y="187" key="run.anything.popup" timestamp="1605502042216">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605274270571" />
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1605502042216" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1605230799316">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

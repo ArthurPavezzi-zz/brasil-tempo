@@ -1975,7 +1975,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6630,7 +6629,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".location-input[data-v-385e73b8] {\n  display: flex;\n  border-radius: 10px;\n  width: 50%;\n  margin: 0 auto;\n}\n.location-input input[data-v-385e73b8] {\n  padding-left: 10px;\n}\n.vue-progress-path[data-v-385e73b8] {\n  display: flex;\n  margin: 180px auto;\n}\n.weather-container[data-v-385e73b8] {\n  margin-right: auto;\n  margin-left: auto;\n}\n.weather-image[data-v-385e73b8] {\n  right: 0;\n  margin-right: 0;\n}\n.future-max-min[data-v-385e73b8] {\n  margin: 0 0 0 auto;\n}\n", ""]);
+exports.push([module.i, ".vue-progress-path[data-v-385e73b8] {\n  display: flex;\n  margin: 180px auto;\n}\n", ""]);
 
 // exports
 
@@ -60791,7 +60790,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container text-white mb-8" }, [
+  return _c("div", { staticClass: "container text-white" }, [
     _vm._m(0),
     _vm._v(" "),
     !_vm.dailyWeather.length
@@ -60815,7 +60814,7 @@ var render = function() {
           "div",
           {
             staticClass:
-              "weather-container font-sans w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-ld mt-4"
+              "weather-container mx-auto font-sans w-10/12 w-auto sm:w-128 max-w-lg rounded-lg overflow-hidden bg-gray-900 shadow-ld mt-4"
           },
           [
             _c(
@@ -60827,11 +60826,11 @@ var render = function() {
               [
                 _c("div", { staticClass: "flex items-center" }, [
                   _c("div", { staticClass: "w-1/2 current-temp" }, [
-                    _c("div", { staticClass: "text-4xl font-semibold" }, [
+                    _c("p", { staticClass: "text-4xl font-semibold" }, [
                       _vm._v("Máx: " + _vm._s(_vm.dailyWeather[0].max) + "º")
                     ]),
                     _vm._v(" "),
-                    _c("div", [
+                    _c("p", [
                       _vm._v(
                         "Mínima de " + _vm._s(_vm.dailyWeather[0].min) + "º"
                       )
@@ -60839,11 +60838,11 @@ var render = function() {
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "w-1/2 mx-5" }, [
-                    _c("div", { staticClass: "font-semibold" }, [
+                    _c("p", { staticClass: "font-semibold" }, [
                       _vm._v(_vm._s(_vm.dailyWeather[0].description))
                     ]),
                     _vm._v(" "),
-                    _c("div", [
+                    _c("p", [
                       _vm._v(
                         _vm._s(_vm.location.city) +
                           " - " +
@@ -60853,7 +60852,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "weather-image" }, [
+                _c("div", { staticClass: "weather-image mr-0 right-0" }, [
                   _c("img", {
                     attrs: {
                       src: _vm.dailyWeather[0].icon,
@@ -60878,7 +60877,7 @@ var render = function() {
                     [
                       _c("div", { staticClass: "flex items-center" }, [
                         _c(
-                          "div",
+                          "p",
                           { staticClass: "w-1/7 text-lg text-gray-200" },
                           [_vm._v(_vm._s(weather.day))]
                         ),
@@ -60887,18 +60886,16 @@ var render = function() {
                           "div",
                           { staticClass: "w-5/7 inline-flex items-center" },
                           [
-                            _c("div", [
-                              _c("img", {
-                                attrs: {
-                                  src: weather.icon,
-                                  alt: "",
-                                  width: "90",
-                                  height: "90"
-                                }
-                              })
-                            ]),
+                            _c("img", {
+                              attrs: {
+                                src: weather.icon,
+                                alt: "",
+                                width: "80",
+                                height: "80"
+                              }
+                            }),
                             _vm._v(" "),
-                            _c("div", { staticClass: "ml-3" }, [
+                            _c("p", { staticClass: "ml-3" }, [
                               _vm._v(_vm._s(weather.description))
                             ])
                           ]
@@ -60906,11 +60903,14 @@ var render = function() {
                         _vm._v(" "),
                         _c(
                           "div",
-                          { staticClass: "w-1/7 text-right future-max-min" },
+                          {
+                            staticClass:
+                              "future-max-min ml-auto my-0 mr-0 w-1/7 text-right"
+                          },
                           [
-                            _c("div", [_vm._v(_vm._s(weather.max) + "º")]),
+                            _c("p", [_vm._v(_vm._s(weather.max) + "º")]),
                             _vm._v(" "),
-                            _c("div", [_vm._v(_vm._s(weather.min) + "º")])
+                            _c("p", [_vm._v(_vm._s(weather.min) + "º")])
                           ]
                         )
                       ])
@@ -60928,21 +60928,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "location-input text-gray-800" }, [
-      _c("input", {
-        staticClass: "form-control w-full",
-        attrs: {
-          type: "search",
-          id: "address",
-          placeholder: "Procure uma cidade"
-        }
-      }),
-      _vm._v(" "),
-      _c("p", { attrs: { hidden: "" } }, [
-        _vm._v("Selecionado: "),
-        _c("strong", { attrs: { id: "address-value" } }, [_vm._v("none")])
-      ])
-    ])
+    return _c(
+      "div",
+      {
+        staticClass:
+          "location-input mx-6 md:mx-auto w-auto lg:w-1/2 my-0 text-gray-800"
+      },
+      [
+        _c("input", {
+          staticClass: "form-control rounded-3xl pl-4",
+          attrs: {
+            type: "search",
+            id: "address",
+            placeholder: "Procure uma cidade"
+          }
+        })
+      ]
+    )
   }
 ]
 render._withStripped = true
